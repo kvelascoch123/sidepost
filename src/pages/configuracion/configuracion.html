@@ -1,0 +1,104 @@
+<!--
+  Generated template for the ConfiguracionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Configuración</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="conten_t">
+  <ion-item class="conten_t">
+        <ion-label color="primary" floating><h3>Id Organizacion</h3></ion-label>
+        <ion-input type="text" value="E3C4F274F9E44BDC80FB9DA18FC62E78" [(ngModel)]="id_org"></ion-input>
+      </ion-item>
+
+
+  <!--    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Usuario</ion-label>
+      <ion-input  type="number" value=" " [(ngModel)]="usuario"></ion-input>
+    </ion-item>
+  -->
+
+
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Tipo de documento</ion-label>
+      <ion-input type="text" value="518BC2673FE9479CAF451A107B538003" [(ngModel)]="tipo_doc"></ion-input>
+    </ion-item>
+
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Id Doc Orden</ion-label>
+      <ion-input type="text" value="CB6EEA256BBC41109911215C5A14D39B" [(ngModel)]="id_doc_ord"></ion-input>
+    </ion-item>
+
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Id Doc Shipment</ion-label>
+      <ion-input  type="text" value="0CD50184705A42CCBECA4EC967646440" [(ngModel)]="id_doc_shipment"></ion-input>
+    </ion-item>
+
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Id customer</ion-label>
+      <ion-input  type="text" value="0335FD18E3D445EE8FB8C08CE0204995" [(ngModel)]="id_customer"></ion-input>
+    </ion-item>
+
+
+  <!-- 3 items quemados  isRefund isNotcred IdRefundNCR-->
+<!-- INVOICE DATE  &&   CUSTOMER  -->
+
+<!--
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Payment Method</ion-label>
+      <ion-input type="text" value=" " [(ngModel)]="pay_met"></ion-input>
+    </ion-item>
+  -->
+<!-- descripcion pedido -->
+
+<!--
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Payment Term</ion-label>
+      <ion-input type="text" value=" " [(ngModel)]="pay_term"></ion-input>
+    </ion-item>
+-->
+
+<!--
+    <ion-item  class="conten_t">
+      <ion-label color="primary" floating>Price List</ion-label>
+      <ion-input type="text" value=" " [(ngModel)]="pricelist"></ion-input>
+    </ion-item>
+-->
+    <!-- algunos items quemados o enviar vacios -->
+      <!-- ITEMS QUEMADOS EN XML  eeiEdocument =Y   3 ITEMS VAN VACIOS XML  -->
+<!--
+      <ion-item  class="conten_t">
+          <ion-label color="primary" floating>CostCenter</ion-label>
+          <ion-input  type="number" value=" " [(ngModel)]="costcenter"></ion-input>
+        </ion-item>
+-->
+        <ion-item  class="conten_t">
+            <ion-label color="primary" floating>User 1</ion-label>
+            <ion-input  type="text" value="Valor por defecto" [(ngModel)]="user1"></ion-input>
+          </ion-item>
+
+          <ion-item  class="conten_t">
+              <ion-label color="primary" floating>User 2</ion-label>
+              <ion-input type="text" value="Valor por defecto" [(ngModel)]="user2"></ion-input>
+            </ion-item>
+
+
+            <ion-item  class="conten_t">
+                <ion-label color="primary" floating>Warehouse</ion-label>
+                <ion-input type="text" value="1ED78FF85EF445E38C63CD527081C811" [(ngModel)]="warehouse"></ion-input>
+              </ion-item>
+
+
+  <button ion-button block (click)="guardar_config()">
+    Asignar
+  </button>
+  <!-- Un item quemado xml einvoiceBlock = Y-->
+</ion-content>

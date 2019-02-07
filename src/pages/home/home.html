@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons>
+      <button ionic ion-button
+      (click)="_us.cerrar_secion()" color="dark">
+        Salir
+      </button>
+    </ion-buttons>
+    <ion-title >
+      POSS APP
+    </ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only
+      (click)="_cs.ver_carrito() "   [disabled]="_cs.user1==null || _cs.warehouse==null">
+          <ion-icon name="cart" color="dark"> </ion-icon>
+          <ion-badge color="danger">{{_cs.items.length}}</ion-badge>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="conten_t">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div v style="margin-left:20px ; margin-right:20px">  <img src="http://186.69.209.150:8030/restXZ/public/img/logoposs.png" alt=""></div>
+
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+
+
+        <div style="margin-left:20px ; margin-right:20px"  class="conten_t">
+
+          <ion-list >
+            <ion-item-sliding  *ngFor="let item of _ps.productos; let i = index;">
+
+            <ion-item [navParams]="{producto: item}"
+              [navPush]="productoPage" class="conten_t" >
+              <ion-thumbnail item-left>
+                <img src="http://186.69.209.150:8030/restXZ/public/img/producto.jpg" alt="">
+              </ion-thumbnail>
+
+
+
+            <h2><b>{{item.producto}}</b></h2>
+            <h2><b>Precio: ${{item.precio_compra}}</b></h2>
+            <h3>{{item.descripcion}}</h3>
+
+
+            </ion-item>
+            <ion-item-options side="right">
+
+
+             <button ion-button color="primary" (click)="_ps.agregaralpedido(i)">
+                <ion-icon name="cart"></ion-icon>
+                Agregar <br>
+                al pedido
+              </button>
+
+            </ion-item-options>
+          </ion-item-sliding>
+
+          </ion-list>
+
+
+      <ion-infinite-scroll (ionInfinite)="siguiente_pagina($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+      </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+</ion-content>

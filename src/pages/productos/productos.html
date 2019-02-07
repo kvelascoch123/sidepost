@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{producto.producto}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="conten_t" padding>
+
+<img src="http://186.69.209.150:8030/rest/public/img/producto.jpg" alt="">
+
+  <div style="margin-left:20px ; margin-right:20px" >
+    <ion-grid class="conten_t">
+      <ion-row>
+        <ion-col> <h5>Producto:</h5></ion-col>
+        <ion-col> <h6>{{producto.producto}}</h6>
+      </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col><strong> <h5>Precio </h5></strong></ion-col>
+  <ion-col>   <h6>$ {{producto.precio_compra}}</h6></ion-col>
+
+</ion-row>
+
+
+
+<ion-row>
+  <ion-col><strong> <h5>Descripción</h5></strong></ion-col>
+  <ion-col><h6>{{producto.descripcion}}</h6> </ion-col>
+
+</ion-row>
+<ion-row>
+<ion-col><strong> Iva aplicado al prodcuto {{producto.cantidad_iva}} %</strong></ion-col>
+</ion-row>
+
+
+    </ion-grid>
+
+
+
+    <button ion-button block icon-left
+    (click)="_cs.agregar_carrito(producto)">
+      <ion-icon name="cart" >
+      Añadir al pedido </ion-icon>
+    </button>
+  </div>
+
+</ion-content>

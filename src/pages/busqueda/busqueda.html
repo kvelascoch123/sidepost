@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Buscar producto
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="conten_t" >
+  <div  style="margin-left:20px ; margin-right:20px">  <img src="http://186.69.209.150:8030/restXZ/public/img/logoposs.png" alt=""></div>
+<div padding>
+ <h5>Busqueda del producto por nombre:</h5>
+  <ion-searchbar (ionInput)="buscar_productos($event)" ></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of _ps.resultados"
+    [navPush]="productoPage"
+    [navParams]="{producto: item}">
+      {{ item.producto }}
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>

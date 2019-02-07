@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Datos del cliente</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>Nombre:
+      <ion-label color="primary" stacked>Nombre</ion-label>
+      <ion-input type="text" value="{{customer.nombre}}"  [(ngModel)]="nameC" > </ion-input></ion-item>
+    <ion-item>Apellido:
+    <ion-label color="primary" stacked>Apellido</ion-label>
+      <ion-input type = "text" value="{{customer.apellido}}"  [(ngModel)]="last_nameC" > </ion-input></ion-item>
+    <ion-item>Direccion:
+      <ion-label color="primary" stacked>Direccion</ion-label>
+      <ion-input type = "text" value="{{customer.direccion}}"  [(ngModel)]="addressC" ></ion-input> </ion-item>
+    <ion-item>Pais:
+      <ion-label color="primary" stacked>Pais</ion-label>
+      <ion-input type = "text" value="{{customer.country}}"  [(ngModel)]="countryC" ></ion-input></ion-item>
+    <ion-item>Cateoria:
+      <ion-label color="primary" stacked>Categoria</ion-label>
+      <ion-input type = "text" value="{{customer.bp_category}}"  [(ngModel)]="bp_categoryC" ></ion-input></ion-item>
+    <ion-item>TaxId:
+      <ion-label color="primary" stacked>Tax ID</ion-label>
+      <ion-input type = "text" value=" {{customer.taxid}}"  [(ngModel)]="tax_idC" ></ion-input></ion-item>
+      <ion-item>Telefono:
+      <ion-label color="primary" stacked>Teléfono</ion-label>
+      <ion-input type = "text" value=" {{customer.telefono}}"  [(ngModel)]="phoneC" ></ion-input></ion-item>
+    <ion-item>Email:
+      <ion-label color="primary" stacked>Email</ion-label>
+      <ion-input type = "text" value=" {{customer.email}}"  [(ngModel)]="emailC" ></ion-input></ion-item>
+      <ion-item>IdCliente:
+        <ion-label color="primary" stacked>Id Cliente</ion-label>
+        <ion-input type = "text" value=" {{customer.idcustomer}}"  [(ngModel)]="id_customerC" ></ion-input></ion-item>
+
+
+
+
+
+  <div padding>
+    <button ion-button block (click)="guardarCustomer()">
+      Confirmar el cliente
+    </button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,13 @@
+export {CarritoPage} from "./carrito/carrito";
+export {CategoriasPage} from "./categorias/categorias";
+export {LoginPage} from "./login/login";
+export {OrdenesPage} from "./ordenes/ordenes";
+export { OrdenesDetallePage} from "./ordenes-detalle/ordenes-detalle";
+export {PorCategoriasPage } from "./por-categorias/por-categorias";
+export {ProductosPage } from "./productos/productos";
+export {TabsPage } from "./tabs/tabs";
+export {HomePage } from "./home/home";
+export {CustomerPage} from "./customer/customer";
+export { ModalCustomerPage} from "./modal-customer/modal-customer";
+export { ConfiguracionPage} from "./configuracion/configuracion";
+export { IntroduccionPage} from "./introduccion/introduccion";

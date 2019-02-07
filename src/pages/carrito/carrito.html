@@ -1,0 +1,112 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons>
+      <button ion-button
+              (click)="viewCtrl.dismiss()">
+        Cerrar
+      </button>
+    </ion-buttons>
+    <ion-title>Carrito de Compras</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="conten_t">
+  <div text-center
+       *ngIf="_cs.items.length === 0"
+       class="carrito_vacio">
+    <ion-icon name="ios-cart-outline"
+              class="icon-5x"></ion-icon>
+    <br>
+    Su carrito esta vacio
+  </div>
+  <div *ngIf="_cs.items.length != 0">
+  <ion-list class="conten_t_b">
+    <ion-item-sliding *ngFor="let item of _cs.items; let i = index;">
+    <ion-item class="conten_t_b">
+      <ion-thumbnail item-left>
+        <img src="http://186.69.209.150:8030/rest/public/img/producto.jpg">
+      </ion-thumbnail>
+      <h2>{{ item.producto }}</h2>
+      <h3>Precio: $ {{ item.precio_compra}}</h3>
+      <h4>{{item.descripcion}}</h4>
+      <small>Cantidad: {{item.cantidad}}</small><br>
+      <small>
+        Total + iva: {{item.total_prod_con_iva}} <br>
+      </small>
+    </ion-item>
+    <ion-item-options side="right">
+      <button ion-button color="danger" (click)="_cs.remover_item(i)">
+        <ion-icon name="ios-trash-outline"></ion-icon>
+        Eliminar <br>
+        Producto
+      </button>
+
+     <button ion-button color="primary" (click)="_cs.edit_cantidad(i)">
+        <ion-icon name="md-swap"></ion-icon>
+        Editar <br>
+        Cantidad
+      </button>
+
+    </ion-item-options>
+  </ion-item-sliding>
+
+
+
+  </ion-list>
+  <button ion-button block (click)="_cs.alertCustomer()" >Asignar nuevo cliente</button>
+  <button ion-button block (click)="_cs.ir()" > Buscar cliente</button>
+
+
+
+  <ion-grid>
+    <ion-row *ngIf="_cs.nameC != null">
+      <ion-col>
+      <h1><u>Cliente</u></h1>
+      <h5>{{_cs.nameC}}</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <h1><u>Datos de la factura</u></h1>
+        <h3>
+          <strong>Total :</strong>
+          {{ _cs.total_carrito | currency:'USD':true }}
+        </h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col >
+        <h3>
+          <strong>Subtotal:</strong>
+          {{_cs.subtotal | currency:'USD':true  }}
+        </h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col  >
+        <h3  >
+          <strong>Total Iva 12%: </strong>
+          {{ _cs.ivaTotal | currency:'USD':true }}
+        </h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      {{_cs.nombre}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row><ion-col>  <button ion-button
+              block
+              [disabled]="_cs.nameC==null"
+              (click)="_cs.realizar_pedido()">
+        Realizar Pedido
+      </button></ion-col></ion-row>
+  </ion-grid>
+  <hr>
+
+<!--inputs oculatos para el data.append del POST -->
+<ion-input *ngIf="_cs.iva()" type="hidden" [(ngModel)]="total_carrito" value="{{_cs.total_carrito}}"> </ion-input>
+<ion-input *ngIf="_cs.iva()" type="hidden" [(ngModel)]="ivaTotal" value="{{_cs.ivaTotal}} " step="0.01"> </ion-input>
+</div>
+</ion-content>

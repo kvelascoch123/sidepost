@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{ categoria.linea }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="conten_t" >
+
+  <ion-list class="conten_t">
+
+    <ion-item class="conten_t" *ngFor="let item of _ps.por_categoria"
+    [navPush]="productoPage"
+    [navParams]="{ producto: item }" >
+
+      <ion-thumbnail item-left>
+        <img src="http://186.69.209.150:8030/rest/public/img/producto.jpg">
+      </ion-thumbnail>
+
+      <h2>{{ item.producto }}</h2>
+      <h4>Precio: ${{item.precio_compra}}</h4>
+      <small>{{item.descripcion}}</small>
+
+
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,24 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Categories</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="conten_t">
+  <div  style="margin-left:20px ; margin-right:20px">  <img src="http://186.69.209.150:8030/restXZ/public/img/logoposs.png" alt=""></div>
+
+  <ion-list class="conten_t">
+    <button ion-item
+            *ngFor="let categoria of _ps.lineas"
+            [navPush]="porCategorias"
+            [navParams]="{ categoria: categoria }" class="conten_t">
+
+      <ion-icon [name]="categoria.icono" item-left></ion-icon>
+      <h3><b>{{ categoria.linea }}</b></h3>
+    </button>
+  </ion-list>
+</ion-content>

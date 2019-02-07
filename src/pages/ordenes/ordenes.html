@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Orders</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="conten_t" pading>
+
+
+
+  <div  style="margin-left:20px ; margin-right:20px">  <img src="http://186.69.209.150:8030/restXZ/public/img/logoposs.png" alt=""></div>
+  <div text-center
+       *ngIf="_us.token==null"
+       class="carrito_vacio">
+    <ion-icon name="ios-cart-outline"
+              class="icon-5x"></ion-icon>
+    <br>
+    Ingrese al carrito, realice el login y podra ver las ordenes de compra.
+  </div>
+
+  <ion-list class="conten_t">
+    <button
+    ion-item
+    *ngFor="let orden of _cs.ordenes"
+      [navPush]="ordenesDetalle"
+      [navParams]="{orden:orden}" class="conten_t">  <!-->este objeto voy a mandar al orden detalle
+      </!-->
+      <strong>N° de la orden:</strong>
+
+      {{orden.id}} <br>
+      Asignado a: {{orden.nombre}} <br>
+    <small>  Fecha:{{orden.creado_en}} </small><br>
+    <small>Total: {{orden.total}}</small><br>
+    <small>SubTotal: {{orden.subtotal}}</small><br>
+    <small>Iva: {{orden.ivatotal}}</small>
+
+    </button>
+  </ion-list>
+
+</ion-content>
