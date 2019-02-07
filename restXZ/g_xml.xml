@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<invoiceSaleXML>
+  <invoiceSale>
+    <idOrganization>E3C4F274F9E44BDC80FB9DA18FC62E78</idOrganization>
+    <user> </user>
+    <documentType>518BC2673FE9479CAF451A107B538003</documentType>
+    <idDocOrder>CB6EEA256BBC41109911215C5A14D39B</idDocOrder>
+    <idDocShipment>0CD50184705A42CCBECA4EC967646440</idDocShipment>
+    <isRefund>N</isRefund>
+    <isNotCred>N</isNotCred>
+    <IdRefundNCR>NA</IdRefundNCR>
+    <invoiceDate>2018-04-17</invoiceDate>
+    <idCustomer>0335FD18E3D445EE8FB8C08CE0204995</idCustomer>
+    <paymentMethod> </paymentMethod>
+    <description>PEDIDO: K33606</description>
+    <paymentTerm> </paymentTerm>
+    <priceList> </priceList>
+    <eeiEdocument>Y</eeiEdocument>
+    <spseiOrderCode> </spseiOrderCode>
+    <spseiLiquidationCode> </spseiLiquidationCode>
+    <spseiReferenceDecosc> </spseiReferenceDecosc>
+    <costCenter> </costCenter>
+    <user1>Valor por defecto   </user1>
+    <user2>Valor por defecto   </user2>
+    <warehouse>1ED78FF85EF445E38C63CD527081C811</warehouse>
+    <einvoiceBlock>N</einvoiceBlock>
+    <line>
+      <description> </description>
+      <orderDate>2018-10-18</orderDate>
+      <product>9781C2141C7542BBB22676AABB7115CB</product>
+      <priceList>17.57</priceList>
+      <unitPrice>17.57</unitPrice>
+      <priceLimit>0</priceLimit>
+      <quantity>12</quantity>
+      <discount>0</discount>
+      <tax>49ACE25D98164D2496062AF72FE972BE</tax>
+      <warehouse>1ED78FF85EF445E38C63CD527081C811</warehouse>
+      <costCenter>17.57</costCenter>
+      <user1>1</user1>
+      <user2>Valor por defecto   </user2>
+    </line>
+    <line>
+      <description> </description>
+      <orderDate>2018-10-18</orderDate>
+      <product>9781C2141C7542BBB22676AABB7115CB</product>
+      <priceList>7.57</priceList>
+      <unitPrice>7.57</unitPrice>
+      <priceLimit>0</priceLimit>
+      <quantity>1</quantity>
+      <discount>0</discount>
+      <tax>49ACE25D98164D2496062AF72FE972BE</tax>
+      <warehouse>1ED78FF85EF445E38C63CD527081C811</warehouse>
+      <costCenter>7.57</costCenter>
+      <user1>1</user1>
+      <user2>Valor por defecto   </user2>
+    </line>
+  </invoiceSale>
+</invoiceSaleXML>
